@@ -53,7 +53,7 @@ For an in-depth understanding of the security vulnerabilities covered in this pr
 
 The PDF includes step-by-step examples of how each vulnerability can be exploited, reflecting real-world attack patterns that can help both developers and security professionals understand the intricacies of web security.
 
-To delve into the details, please refer to the [StiCastOWASPTraining.pdf](StiCastOWASPTraining.pdf) included in this repository.
+To delve into the details, please refer to the [StiCastOWASPTraining.pdf](StiCastOWASPTraining.pdf) (ITA) included in this repository.
 
 ## Contributing
 

@@ -47,6 +47,20 @@ Discusses encrypting sensitive data transmissions using HTTPS and secure passwor
 ### Broken Authentication
 This project also delves into the prevalent issue of Broken Authentication. Broken Authentication occurs when attackers are able to compromise user accounts, keys, or session tokens to assume user identities. The examples provided in this study demonstrate how attackers exploit common issues such as predictable login credentials, poorly protected session tokens, and flaws in logout mechanisms.
 
+This project also delves into the prevalent issue of Broken Authentication. Broken Authentication occurs when attackers are able to compromise user accounts, keys, or session tokens to assume user identities. Implemented 2FA, brute force account blocking, and token recovery password. 
+
+### Exploitation Example
+A practical example of a Broken Authentication vulnerability is demonstrated with a scenario where attackers utilize brute force attacks to guess weak user passwords. The associated PDF provides a step-by-step walkthrough of this attack.
+
+### Mitigation Techniques
+To protect against Broken Authentication:
+- Implement multi-factor authentication.
+- Use strong, complex passwords and enforce password complexity requirements.
+- Ensure session tokens are unique, randomly generated, and securely stored.
+- Implement secure session management, including timeouts and proper session invalidation on logout.
+
+For more details on Broken Authentication exploitation and mitigation strategies, please refer to the [Elaborato.pdf](Elaborato.pdf).
+
 ## Detailed Vulnerability Descriptions and Exploitation Scenarios
 
 For an in-depth understanding of the security vulnerabilities covered in this project, along with real-case exploitation scenarios, you can check the accompanying PDF document. It provides a comprehensive analysis of each vulnerability, outlines methods of exploit, and offers a rich set of resources for further learning and mitigation strategy.

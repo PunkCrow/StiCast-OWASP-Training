@@ -42,11 +42,9 @@ Demonstrates CSRF attacks through practical scenarios and discusses mitigation s
 Explores various forms of SQL Injection attacks and their prevention, emphasizing the importance of using parameterized queries.
 
 ### Sensitive Data Exposure / Crypographic Failures
-Discusses encrypting sensitive data transmissions using HTTPS and secure password storage mechanisms.
+Discusses encrypting sensitive data transmissions using HTTPS and secure password storage mechanisms. Implemented HTTPS and password hashing.
 
 ### Broken Authentication
-This project also delves into the prevalent issue of Broken Authentication. Broken Authentication occurs when attackers are able to compromise user accounts, keys, or session tokens to assume user identities. The examples provided in this study demonstrate how attackers exploit common issues such as predictable login credentials, poorly protected session tokens, and flaws in logout mechanisms.
-
 This project also delves into the prevalent issue of Broken Authentication. Broken Authentication occurs when attackers are able to compromise user accounts, keys, or session tokens to assume user identities. Implemented 2FA, brute force account blocking, and token recovery password.
 
 ## Detailed Vulnerability Descriptions and Exploitation Scenarios

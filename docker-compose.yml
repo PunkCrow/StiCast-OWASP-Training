@@ -1,0 +1,43 @@
+version: '3'
+services:
+
+ db_ko:
+  image: mysql
+  environment:
+    MYSQL_DATABASE: db_sticast_ko
+    MYSQL_USER: myuser
+    MYSQL_PASSWORD: mypass
+    MYSQL_ROOT_PASSWORD: root
+  volumes:
+    - ./db_ko:/docker-entrypoint-initdb.d
+
+ db_ok:
+  image: mysql
+  environment:
+    MYSQL_DATABASE: db_sticast_ok
+    MYSQL_USER: myuser
+    MYSQL_PASSWORD: mypass
+    MYSQL_ROOT_PASSWORD: root
+  volumes:
+    - ./db_ok:/docker-entrypoint-initdb.d
+
+ tomcat_ok:
+  image: tomcat:9.0.37
+  ports:
+    - "8443:8443"
+  volumes:
+    - ./sticast_ok.war:/usr/local/tomcat/webapps/sticast_ok.war
+    - ./ssl:/usr/local/tomcat/ssl
+    - ./server.xml:/usr/local/tomcat/conf/server.xml
+  depends_on:
+    - db_ok
+
+ tomcat_ko:
+  image: tomcat:9.0
+  ports:
+    - "8080:8080"
+  volumes:
+    - ./sticast_ko.war:/usr/local/tomcat/webapps/sticast_ko.war
+    - ./context.xml:/usr/local/tomcat/conf/context.xml
+  depends_on:
+    - db_ko
